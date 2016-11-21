@@ -1,0 +1,85 @@
+@import "_normalize";
+@import "_reset";
+
+body {
+  background: #b3e0fd;
+  font-size: 16px;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ab007b;
+  &:hover {
+    color: #006cb1;
+  }
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  margin: 100px 0 0;
+}
+
+h1 {
+  display: inline-block;
+  z-index: 1;
+  border-bottom: 5px #ab007b solid; 
+  padding: 0 5px 7px 5px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+section {
+  margin: 80px 0;
+  &:nth-of-type(1) {
+    margin-top: 30px;
+  }
+}
+
+.tanktop, .longsleeve, .shorts, .leggings, .toque, .mittens, .coat, .tshirt, .hoodie, .toohot, .toocold {
+  display: none;
+  img {  
+    width: 85%;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+
+.clothing {
+  text-align: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+input[type=submit] {
+  background: #ab007b;
+  border: none;
+  color: white;
+  padding: 12px;
+}
+
+input[type=search] {
+  border: 2px solid #ab007b;
+  padding: 10px;
+}
+
+footer {
+  h4 {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
