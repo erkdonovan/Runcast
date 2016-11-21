@@ -22,6 +22,8 @@ appRunning.didItFail = function(maybe) {
 
     var usersLocation = maybe.location.l
     $('.failed').hide();
+    $('.weather').show();
+    $('.clothing').show();
     appRunning.getWeather(usersLocation)
 
   }
@@ -45,6 +47,7 @@ appRunning.findLocation = function() {
 
   $('form').on('submit', function(e) {
     e.preventDefault();
+
     var searchfield = $('input[type=search]').val();
     //console.log(searchfield)
     appRunning.getLocation(searchfield)
@@ -52,7 +55,6 @@ appRunning.findLocation = function() {
   });
 
 }
-
 
 //display weather for Toronto 
 appRunning.displayWeather = function(weather) {
@@ -67,8 +69,6 @@ appRunning.displayWeather = function(weather) {
 
   appRunning.displayClothing(weather)
 }
-
-//weather icon http://icons.wxug.com/i/c/i/ICON.gif
 
 //display clothing to wear running based on weather
 appRunning.displayClothing = function(clothing) {
@@ -91,13 +91,18 @@ appRunning.displayClothing = function(clothing) {
     $('.tshirt').css({'display': 'inline-block'});
     $('.shorts').css({'display': 'inline-block'});
 
-  } else if (clothing.feelslike_c >= -5) {
+  } else if (clothing.feelslike_c > 0) {
 
-    //leggings and long sleeve 
+    $('.longsleeve').css({'display': 'inline-block'});
+    $('.leggings').css({'display': 'inline-block'});
+
+  } else if (clothing.feelslike_c > -5) {
+
     $('.longsleeve').css({'display': 'inline-block'});
     $('.leggings').css({'display': 'inline-block'});
     $('.mittens').css({'display': 'inline-block'});
     $('.toque').css({'display': 'inline-block'});
+
 
   } else if (clothing.feelslike_c > -15) {
 
@@ -119,6 +124,7 @@ appRunning.displayClothing = function(clothing) {
 //Runs all the stuffs
 appRunning.init = function () {
   appRunning.findLocation();
+  //$('.results').empty();
 };
 
 $(document).ready(function() {

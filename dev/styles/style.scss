@@ -47,7 +47,7 @@ section {
 .tanktop, .longsleeve, .shorts, .leggings, .toque, .mittens, .coat, .tshirt, .hoodie, .toohot, .toocold {
   display: none;
   img {  
-    width: 85%;
+    width: 150px;
   }
   p {
     margin: 0;
@@ -55,8 +55,8 @@ section {
 }
 
 
-.clothing {
-  text-align: center;
+.clothing, .weather {
+  display: none;
 }
 
 span {

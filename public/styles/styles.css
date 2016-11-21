@@ -304,12 +304,12 @@ section {
 .tanktop, .longsleeve, .shorts, .leggings, .toque, .mittens, .coat, .tshirt, .hoodie, .toohot, .toocold {
   display: none; }
   .tanktop img, .longsleeve img, .shorts img, .leggings img, .toque img, .mittens img, .coat img, .tshirt img, .hoodie img, .toohot img, .toocold img {
-    width: 85%; }
+    width: 150px; }
   .tanktop p, .longsleeve p, .shorts p, .leggings p, .toque p, .mittens p, .coat p, .tshirt p, .hoodie p, .toohot p, .toocold p {
     margin: 0; }
 
-.clothing {
-  text-align: center; }
+.clothing, .weather {
+  display: none; }
 
 span {
   font-weight: bold; }
