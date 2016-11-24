@@ -36,7 +36,7 @@ appRunning.getWeather = function(zmw) {
     method: 'get',
     dataType: 'json'
   }).then(function(weatherData) {
-    //console.log(weatherData)
+    console.log(weatherData)
     currentWeather = weatherData.current_observation
     appRunning.displayWeather(currentWeather);
   });
@@ -61,11 +61,20 @@ appRunning.displayWeather = function(weather) {
   //console.log(weather)
   $('.location').text(weather.display_location.full);
 
-  if (weather.feelslike_c != '') {
-    $('.temp').text('the current temperature is ' + weather.feelslike_c + '° Celsius');  
+  if (weather.display_location.country === 'US') {
+
+    if (weather.feelslike_f != '') {
+      $('.temp').text('the current temperature is ' + weather.feelslike_f + '° Fahrenheit');  
+    } 
+
   } else {
 
+    if (weather.feelslike_c != '') {
+      $('.temp').text('the current temperature is ' + weather.feelslike_c + '° Celsius');  
+    } 
+
   }
+
 
   if (weather.weather != '') {
     $('.currentweather').text(' and ' + weather.weather);
