@@ -268,38 +268,42 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
-  background: #b3e0fd;
+  background: url(../../assets/photo-1417008914239-59b898b49382.jpeg);
+  background-size: cover;
   font-size: 16px; }
 
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #ab007b; }
+  color: #cc3a77; }
   a:hover {
-    color: #006cb1; }
+    color: #006c21; }
 
 main {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  padding: 40px 0; }
+
+.container {
+  padding: 20px 0;
+  background: rgba(250, 250, 250, 0.7); }
 
 header {
-  margin: 100px 0 0; }
+  margin-bottom: 50px; }
 
 h1 {
   display: inline-block;
+  font-size: 5rem;
   z-index: 1;
-  border-bottom: 5px #ab007b solid;
-  padding: 0 5px 7px 5px; }
+  border-bottom: 5px #cc3a77 solid;
+  padding: 0 5px 7px 5px;
+  margin-bottom: 0; }
 
 h3 {
-  text-transform: uppercase; }
-
-section {
-  margin: 80px 0; }
-  section:nth-of-type(1) {
-    margin-top: 30px; }
+  text-transform: uppercase;
+  margin-top: 30px; }
 
 .tanktop, .longsleeve, .shorts, .leggings, .toque, .mittens, .coat, .tshirt, .hoodie, .toohot, .toocold {
   display: none; }
@@ -308,24 +312,25 @@ section {
   .tanktop p, .longsleeve p, .shorts p, .leggings p, .toque p, .mittens p, .coat p, .tshirt p, .hoodie p, .toohot p, .toocold p {
     margin: 0; }
 
+.currentweather {
+  text-transform: lowercase; }
+
 .clothing, .weather {
   display: none; }
 
-span {
-  font-weight: bold; }
-
 input[type=submit] {
-  background: #ab007b;
+  background: #cc3a77;
   border: none;
   color: white;
   padding: 12px; }
 
 input[type=search] {
-  border: 2px solid #ab007b;
+  border: 2px solid #cc3a77;
   padding: 10px; }
 
-footer h4 {
-  margin-bottom: 0; }
-
-footer p {
-  margin: 0; }
+footer {
+  margin-bottom: 20px; }
+  footer h4 {
+    margin-bottom: 0; }
+  footer p {
+    margin: 0; }

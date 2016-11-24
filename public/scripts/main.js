@@ -60,12 +60,18 @@ appRunning.findLocation = function() {
 appRunning.displayWeather = function(weather) {
   //console.log(weather)
   $('.location').text(weather.display_location.full);
-  $('.temp').text(weather.feelslike_c);
-  $('.currentweather').text(weather.weather);
-  $('.weather_icon').attr({
-    src: weather.icon_url,
-    alt: weather.weather
-  });
+
+  if (weather.feelslike_c != '') {
+    $('.temp').text('the current temperature is ' + weather.feelslike_c + '° Celsius');  
+  } else {
+
+  }
+
+  if (weather.weather != '') {
+    $('.currentweather').text(' and ' + weather.weather);
+  } else {
+
+  }
 
   appRunning.displayClothing(weather)
 }
@@ -73,6 +79,16 @@ appRunning.displayWeather = function(weather) {
 //display clothing to wear running based on weather
 appRunning.displayClothing = function(clothing) {
   //console.log(clothing)
+
+  $('.userlocation').hide();
+  $('.tanktop').hide();
+  $('.shorts').hide();
+  $('.tshirt').hide();
+  $('.longsleeve').hide();
+  $('.coat').hide();
+  $('.leggings').hide();
+  $('.mittens').hide();
+  $('.toque').hide();
 
   if (clothing.feelslike_c > 35) {
 
@@ -118,6 +134,10 @@ appRunning.displayClothing = function(clothing) {
     $('.toocold').show();
 
   }
+
+  // if rain show light jacket
+
+  // if wind and below 5 show toque
 
 }
 
