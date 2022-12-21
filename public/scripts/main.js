@@ -3,7 +3,7 @@ var appRunning = {};
 //search for users postal code
 appRunning.getLocation = function(postalCode) {
   $.ajax({
-    url: 'http://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + postalCode + '&aqi=no',
+    url: 'https://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + postalCode + '&aqi=no',
     method: 'get',
     dataType: 'json'
   }).then(function(userPostalCode) {
@@ -32,7 +32,7 @@ appRunning.didItFail = function(maybe) {
 //get weather for the users location q/textcode
 appRunning.getWeather = function(zmw) {
   $.ajax({
-    url: 'http://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + zmw + '&aqi=no',
+    url: 'https://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + zmw + '&aqi=no',
     method: 'get',
     dataType: 'json'
   }).then(function(weatherData) {
