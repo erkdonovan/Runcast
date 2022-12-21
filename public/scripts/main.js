@@ -3,41 +3,41 @@ var appRunning = {};
 //search for users postal code
 appRunning.getLocation = function(postalCode) {
   $.ajax({
-    url: 'http://api.wunderground.com/api/62a926f01f62970f/geolookup/q/' + postalCode + '.json',
+    url: 'http://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + postalCode + '&aqi=no',
     method: 'get',
     dataType: 'json'
   }).then(function(userPostalCode) {
-    //console.log(userPostalCode)
+    console.log(userPostalCode)
     appRunning.didItFail(userPostalCode)
   });
 }
 
 appRunning.didItFail = function(maybe) {
-  //console.log('maybe?', maybe)
-  if (maybe.response.error != undefined ) {
+  console.log('maybe?', maybe)
+  // if (maybe.response.error != undefined ) {
 
-    $('.failed').text(maybe.response.error.description)
+  //   $('.failed').text(maybe.response.error.description)
 
-  } else {
+  // } else {
 
-    var usersLocation = maybe.location.l
+    var usersLocation = maybe.location.name
     $('.failed').hide();
     $('.weather').show();
     $('.clothing').show();
     appRunning.getWeather(usersLocation)
 
-  }
+  // }
 }
 
 //get weather for the users location q/textcode
 appRunning.getWeather = function(zmw) {
   $.ajax({
-    url: 'http://api.wunderground.com/api/62a926f01f62970f/conditions/' + zmw + '.json',
+    url: 'http://api.weatherapi.com/v1/current.json?key=c2d76cf54e6f4894820162433222112&q=' + zmw + '&aqi=no',
     method: 'get',
     dataType: 'json'
   }).then(function(weatherData) {
-    console.log(weatherData)
-    currentWeather = weatherData.current_observation
+    //console.log(weatherData)
+    currentWeather = weatherData
     appRunning.displayWeather(currentWeather);
   });
 }
@@ -58,31 +58,33 @@ appRunning.findLocation = function() {
 
 //display weather for Toronto 
 appRunning.displayWeather = function(weather) {
-  //console.log(weather)
-  $('.location').text(weather.display_location.full);
+  console.log(weather)
+  $('.location').text(weather.location.name);
 
-  if (weather.display_location.country === 'US') {
+  if (weather.location.country === 'United States of America') {
 
-    if (weather.feelslike_f != '') {
-      $('.temp').text('the current temperature is ' + weather.feelslike_f + '° Fahrenheit');  
+    if (weather.current.feelslike_f != '') {
+      $('.temp').text('the current temperature is ' + weather.current.feelslike_f + '° Fahrenheit');  
+      feelsLike = weather.current
     } 
 
   } else {
 
-    if (weather.feelslike_c != '') {
-      $('.temp').text('the current temperature is ' + weather.feelslike_c + '° Celsius');  
+    if (weather.current.feelslike_c != '') {
+      $('.temp').text('the current temperature is ' + weather.current.feelslike_c + '° Celsius');  
+      feelsLike = weather.current
     } 
 
   }
 
 
-  if (weather.weather != '') {
-    $('.currentweather').text(' and ' + weather.weather);
-  } else {
+  // if (weather.weather != '') {
+  //   $('.currentweather').text(' and ' + weather.weather);
+  // } else {
 
-  }
+  // }
 
-  appRunning.displayClothing(weather)
+  appRunning.displayClothing(feelsLike)
 }
 
 //display clothing to wear running based on weather

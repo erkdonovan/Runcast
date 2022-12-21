@@ -1,0 +1,336 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+html[xmlns] .clearfix {
+  display: block; }
+
+* html .clearfix {
+  height: 1%; }
+
+* {
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url(../../assets/photo-1417008914239-59b898b49382.jpg);
+  background-size: cover;
+  font-size: 16px; }
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #cc3a77; }
+  a:hover {
+    color: #006c21; }
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0; }
+
+.container {
+  padding: 20px 0;
+  background: rgba(250, 250, 250, 0.7); }
+
+header {
+  margin-bottom: 50px; }
+
+h1 {
+  display: inline-block;
+  font-size: 5rem;
+  z-index: 1;
+  border-bottom: 5px #cc3a77 solid;
+  padding: 0 5px 7px 5px;
+  margin-bottom: 0; }
+
+h3 {
+  text-transform: uppercase;
+  margin-top: 30px; }
+
+.tanktop, .longsleeve, .shorts, .leggings, .toque, .mittens, .coat, .tshirt, .hoodie, .toohot, .toocold {
+  display: none; }
+  .tanktop img, .longsleeve img, .shorts img, .leggings img, .toque img, .mittens img, .coat img, .tshirt img, .hoodie img, .toohot img, .toocold img {
+    width: 150px; }
+  .tanktop p, .longsleeve p, .shorts p, .leggings p, .toque p, .mittens p, .coat p, .tshirt p, .hoodie p, .toohot p, .toocold p {
+    margin: 0; }
+
+.currentweather {
+  text-transform: lowercase; }
+
+.clothing, .weather {
+  display: none; }
+
+input[type=submit] {
+  background: #cc3a77;
+  border: none;
+  color: white;
+  padding: 12px; }
+
+input[type=search] {
+  border: 2px solid #cc3a77;
+  padding: 10px; }
+
+footer {
+  margin-bottom: 20px; }
+  footer h4 {
+    margin-bottom: 0; }
+  footer p {
+    margin: 0; }
